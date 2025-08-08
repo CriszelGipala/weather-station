@@ -1,14 +1,12 @@
+// controllers/station-controller.js
 import { stationStore } from "../models/station-store.js";
+import { reportStore } from "../models/report-store.js";
 
 export const stationController = {
-  async index(request, response) {
+  async viewStation(request, response) {
     const stationId = request.params.id;
     const station = await stationStore.getStationById(stationId);
-    const viewData = {
-      title: "Station Details",
-      station: station,
-      active: "dashboard"
-    };
-    response.render("station-view", viewData);
+    const reports = await reportStore.getReportsByStationId(stationId);
+    response.render("station-view", { station, reports });
   }
 };

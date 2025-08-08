@@ -16,5 +16,24 @@
     "fs-extra": "^11.1.0",
     "lowdb": "^5.1.0",
     "uuid": "^9.0.0"
+  },
+  "repository": {
+    "url": "https://github.com/CriszelGipala/weather-station"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ],
+  "engines": {
+    "node": "16.x.x"
+  },
+  "prettier": {
+    "singleQuote": false,
+    "printWidth": 120
+  },
+  "devDependencies": {
+    "prettier": "^2.8.4"
   }
 }

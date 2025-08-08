@@ -1,0 +1,58 @@
+<form action="/station/{{station._id}}/addreport" method="POST" class="box">
+
+<div class="field">
+  <label class="label">Code</label>
+  <div class="control">
+    <div class="select">
+      <select name="code" required>
+        <option value="">Select code</option>
+        <option value="800">800 - Clear</option>
+        <option value="801">801 - Few clouds</option>
+        <option value="802">802 - Scattered clouds</option>
+        <option value="803">803 - Broken clouds</option>
+        <option value="804">804 - Overcast clouds</option>
+        <option value="500">500 - Light rain</option>
+        <option value="501">501 - Moderate rain</option>
+        <option value="600">600 - Light snow</option>
+        <option value="601">601 - Snow</option>
+        <option value="200">200 - Thunderstorm</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+  <div class="field">
+    <label class="label">Temperature (°C)</label>
+    <div class="control">
+      <input class="input" type="number" name="temperature" required />
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Wind Speed (km/h)</label>
+    <div class="control">
+      <input class="input" type="number" name="windSpeed" required />
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Wind Direction</label>
+    <div class="control">
+      <input class="input" type="text" name="windDirection" required />
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Pressure (hPa)</label>
+    <div class="control">
+      <input class="input" type="number" name="pressure" required />
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <button class="button is-primary" type="submit">Submit Report</button>
+    </div>
+  </div>
+</form>

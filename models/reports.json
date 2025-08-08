@@ -1,0 +1,41 @@
+{
+  "file": "./models/reports.json",
+  "reports": [
+    {
+      "code": "80",
+      "temperature": "12",
+      "windSpeed": "23",
+      "windDirection": "21",
+      "pressure": "45",
+      "_id": "5503b804-cb7e-40e6-b7a7-604244519349",
+      "stationId": "2781037a-2146-49f0-80dc-b94c4e061772"
+    },
+    {
+      "code": "90",
+      "temperature": "34",
+      "windSpeed": "12",
+      "windDirection": "68",
+      "pressure": "12",
+      "_id": "8cc4f2bb-4d06-4bb0-8581-c4af441d07c2",
+      "stationId": "2781037a-2146-49f0-80dc-b94c4e061772"
+    },
+    {
+      "code": "11",
+      "temperature": "11",
+      "windSpeed": "11",
+      "windDirection": "11",
+      "pressure": "11",
+      "_id": "7e714da0-a41b-469e-9ba4-0e6eafd8be66",
+      "stationId": "d0893a28-6a93-4606-9bc6-6fcc8ff3cca9"
+    },
+    {
+      "code": "800",
+      "temperature": "12",
+      "windSpeed": "12",
+      "windDirection": "12",
+      "pressure": "12",
+      "_id": "1c380c03-7702-4bdb-b64d-737f72ea7630",
+      "stationId": "2781037a-2146-49f0-80dc-b94c4e061772"
+    }
+  ]
+}
