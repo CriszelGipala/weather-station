@@ -45,6 +45,24 @@
       "pressure": "11",
       "_id": "4258853c-af67-4645-b7b1-ffc4e0b5908c",
       "stationId": "d0893a28-6a93-4606-9bc6-6fcc8ff3cca9"
+    },
+    {
+      "code": "800",
+      "temperature": "11",
+      "windSpeed": "11",
+      "windDirection": "11",
+      "pressure": "11",
+      "_id": "480da46e-1898-418b-ac4e-dcde32fe6eaf",
+      "stationId": "bb8d5b71-2a95-4f96-8b8b-a731c403ec17"
+    },
+    {
+      "code": "500",
+      "temperature": "22",
+      "windSpeed": "22",
+      "windDirection": "22",
+      "pressure": "22",
+      "_id": "e59f9ad1-ca0f-47b5-8b37-c50bc7da0ec1",
+      "stationId": "4ecbf928-5742-4a4e-95bd-181e20531cc8"
     }
   ]
 }

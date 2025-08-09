@@ -1,0 +1,19 @@
+{
+  "file": "./models/users.json",
+  "users": [
+    {
+      "firstName": "C",
+      "lastName": "G",
+      "email": "gipalacriszel512@gmail.com",
+      "password": "software2026",
+      "_id": "977c085e-1c4c-46ed-9200-5bb0d5668078"
+    },
+    {
+      "firstName": "Cr",
+      "lastName": "Gi",
+      "email": "cryptoz934@gmail.com",
+      "password": "software2026",
+      "_id": "42d955f6-c962-43e5-a343-3d6379e5c893"
+    }
+  ]
+}

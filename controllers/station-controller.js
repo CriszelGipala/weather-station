@@ -8,5 +8,11 @@ export const stationController = {
     const station = await stationStore.getStationById(stationId);
     const reports = await reportStore.getReportsByStationId(stationId);
     response.render("station-view", { station, reports });
+  },
+
+  async getStationsByUserId(userid) {
+    await db.read();
+    return db.data.stations.filter((station) => station.userid === userid);
   }
+
 };
