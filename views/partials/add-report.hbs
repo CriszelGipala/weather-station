@@ -37,11 +37,22 @@
   </div>
 
   <div class="field">
-    <label class="label">Wind Direction</label>
-    <div class="control">
-      <input class="input" type="text" name="windDirection" required />
-    </div>
+  <label class="label">Wind Direction</label>
+  <div class="select">
+    <select name="windDirection" required>
+      <option value="">Select</option>
+      <option value="0">N (0°)</option>
+      <option value="45">NE (45°)</option>
+      <option value="90">E (90°)</option>
+      <option value="135">SE (135°)</option>
+      <option value="180">S (180°)</option>
+      <option value="225">SW (225°)</option>
+      <option value="270">W (270°)</option>
+      <option value="315">NW (315°)</option>
+    </select>
   </div>
+</div>
+
 
   <div class="field">
     <label class="label">Pressure (hPa)</label>

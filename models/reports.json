@@ -63,6 +63,24 @@
       "pressure": "22",
       "_id": "e59f9ad1-ca0f-47b5-8b37-c50bc7da0ec1",
       "stationId": "4ecbf928-5742-4a4e-95bd-181e20531cc8"
+    },
+    {
+      "code": "802",
+      "temperature": "12",
+      "windSpeed": "12",
+      "windDirection": "225",
+      "pressure": "12",
+      "_id": "9a418d4f-1730-4bed-8d06-8ff087edd490",
+      "stationId": "099511c8-ced9-418e-ad24-4b176ec9f766"
+    },
+    {
+      "code": "802",
+      "temperature": "1",
+      "windSpeed": "10",
+      "windDirection": "135",
+      "pressure": "1",
+      "_id": "6e19b348-cb79-4915-adca-d23698787119",
+      "stationId": "099511c8-ced9-418e-ad24-4b176ec9f766"
     }
   ]
 }

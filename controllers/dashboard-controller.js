@@ -28,7 +28,7 @@ export const dashboardController = {
   async deleteStation(request, response) {
     const stationId = request.params.id;
     console.log(`Deleting Station ${stationId}`);
-    await playlistStore.deletePlaylistById(playlistId);
+    await stationStore.deleteStationById(stationId);
     response.redirect("/dashboard");
   },
 };

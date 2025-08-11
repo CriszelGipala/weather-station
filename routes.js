@@ -5,8 +5,10 @@ import { stationController } from "./controllers/station-controller.js";
 import { aboutController } from "./controllers/about-controller.js";
 import { reportController } from "./controllers/report-controller.js";
 import { accountsController } from './controllers/accounts-controller.js';
+
 export const router = express.Router();
 
+// landing & authentication routes
 router.get("/", accountsController.index);
 router.get("/login", accountsController.login);
 router.get("/signup", accountsController.signup);
