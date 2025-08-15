@@ -9,18 +9,20 @@ export const reportStore = {
     return db.data.reports;
   },
 
-  async addReport(stationId, report) {
-    await db.read();
-    report._id = v4();
-    report.stationId = stationId;
-    db.data.reports.push(report);
-    await db.write();
-    return report;
-  },
-
   async getReportsByStationId(id) {
     await db.read();
     return db.data.reports.filter((report) => report.stationId === id);
+  },
+
+async addReport(stationId, report) {
+    await db.read();
+    report._id = uuid();
+    report.stationId = stationId;
+    // NEW: store created date/time
+    report.date = new Date().toISOString();
+    db.data.reports.push(report);
+    await db.write();
+    return report;
   },
 
   async getReportById(id) {
@@ -28,10 +30,10 @@ export const reportStore = {
     return db.data.reports.find((report) => report._id === id);
   },
 
-  async deleteReport(id) {
+  async deleteReportById(id) {
     await db.read();
-    const index = db.data.reports.findIndex((report) => report._id === id);
-    db.data.reports.splice(index, 1);
+    const i = db.data.reports.findIndex((r) => r._id === id);
+    if (i >= 0) db.data.reports.splice(i, 1);
     await db.write();
   },
 
@@ -40,6 +42,14 @@ export const reportStore = {
     await db.write();
   },
 
+  async deleteReportsByStationId(stationId) {
+    await db.read();
+    db.data.reports = db.data.reports.filter((r) => r.stationId !== stationId);
+    await db.write();
+  },
+
+  // I don't think updatereport should be here, but it is needed for the demo
+  // so I will leave it here for now
   async updateReport(report, updatedReport) {
     report.code = updatedReport.code;
     report.temperature = updatedReport.temperature;

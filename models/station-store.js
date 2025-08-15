@@ -37,6 +37,7 @@ export const stationStore = {
     await db.write();
   },
 
+  // i don't think deleteAllStations should be here, since it is not part of the rubric
   async deleteAllStations() {
     db.data.stations = [];
     await db.write();

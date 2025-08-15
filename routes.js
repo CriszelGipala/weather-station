@@ -24,4 +24,8 @@ router.get("/station/:id", stationController.viewStation);
 router.get("/about", aboutController.index);
 router.post("/station/:id/addreport", reportController.addReport);
 
+// routes.js (add these lines to your existing routes)
+router.post("/station/:id/deletereport/:reportid", requireAuth, stationController.deleteReport);
+router.get("/dashboard/deletestation/:id", requireAuth, dashboardController.deleteStation);
+
 

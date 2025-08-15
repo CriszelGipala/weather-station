@@ -2,51 +2,47 @@
 import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
 
+// include helpers from above here (or import them)
+function minMaxNumbers(nums) { /* as above */ }
+function latestByDate(reports) { /* as above */ }
+function iconForCode(code) { /* as above */ }
+
 export const stationController = {
   async viewStation(request, response) {
     const stationId = request.params.id;
     const station = await stationStore.getStationById(stationId);
     const reports = await reportStore.getReportsByStationId(stationId);
 
-    // --- Calculate summary manually ---
+    // compute summary
     let summary = {
-      minTemp: null,
-      maxTemp: null,
-      minWind: null,
-      maxWind: null,
-      minPressure: null,
-      maxPressure: null,
-      latestCode: null
+      minTemp: null, maxTemp: null,
+      minWind: null, maxWind: null,
+      minPressure: null, maxPressure: null,
+      iconUrl: null
     };
 
     if (reports.length > 0) {
-      // Start with the first report's values
-      summary.minTemp = reports[0].temperature;
-      summary.maxTemp = reports[0].temperature;
-      summary.minWind = reports[0].windSpeed;
-      summary.maxWind = reports[0].windSpeed;
-      summary.minPressure = reports[0].pressure;
-      summary.maxPressure = reports[0].pressure;
+      const temps = reports.map(r => Number(r.temperature));
+      const winds = reports.map(r => Number(r.windSpeed));
+      const press = reports.map(r => Number(r.pressure));
+      const t = minMaxNumbers(temps);
+      const w = minMaxNumbers(winds);
+      const p = minMaxNumbers(press);
+      summary.minTemp = t.min;  summary.maxTemp = t.max;
+      summary.minWind = w.min;  summary.maxWind = w.max;
+      summary.minPressure = p.min; summary.maxPressure = p.max;
 
-      // Loop through remaining reports
-      for (let i = 1; i < reports.length; i++) {
-        const r = reports[i];
-
-        if (r.temperature < summary.minTemp) summary.minTemp = r.temperature;
-        if (r.temperature > summary.maxTemp) summary.maxTemp = r.temperature;
-
-        if (r.windSpeed < summary.minWind) summary.minWind = r.windSpeed;
-        if (r.windSpeed > summary.maxWind) summary.maxWind = r.windSpeed;
-
-        if (r.pressure < summary.minPressure) summary.minPressure = r.pressure;
-        if (r.pressure > summary.maxPressure) summary.maxPressure = r.pressure;
-      }
-
-      // Latest code = code from the last report in the array
-      summary.latestCode = reports[reports.length - 1].code;
+      const latest = latestByDate(reports);
+      const iconId = latest ? iconForCode(latest.code) : "01d";
+      summary.iconUrl = `https://openweathermap.org/img/wn/${iconId}@2x.png`;
     }
 
-    // Send station, reports, and summary to the view
     response.render("station-view", { station, reports, summary });
-  }
+  },
+
+  async deleteReport(request, response) {
+    const { id, reportid } = request.params; // /station/:id/deletereport/:reportid
+    await reportStore.deleteReportById(reportid);
+    response.redirect(`/station/${id}`);
+  },
 };
