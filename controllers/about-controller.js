@@ -1,7 +1,7 @@
 export const aboutController = {
   index(request, response) {
     const viewData = {
-      title: "About Weather",
+      title: "About ++++ Weather",
       active: "about"
     };
     console.log("about rendering");
