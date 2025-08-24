@@ -23,7 +23,7 @@
 {{/each}} --}}
 
 
-<table class="table is-fullwidth is-hoverable">
+{{!-- <table class="table is-fullwidth is-hoverable">
   <thead>
     <tr>
       <th>Station</th>
@@ -52,7 +52,40 @@
           </div>
         </td>
       </tr>
+      <a href="/dashboard/deletestation/{{_id}}" class="button">
+    {{>icons/delete}}
+  </a>
+    {{/each}}
+  </tbody>
+</table> --}}
+
+<table class="table is-fullwidth is-hoverable">
+  <thead>
+    <tr>
+      <th>Station</th>
+      <th>Min Temp</th>
+      <th>Max Temp</th>
+      {{!-- <th>Delete</th> --}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each stations}}
+      <tr>
+        <td>
+          <a href="/station/{{_id}}">{{title}}</a>
+        </td>
+        <td>
+          {{#if summary.tempMin}}{{summary.tempMin}}°C{{/if}}
+        </td>
+        <td>
+          {{#if summary.tempMax}}{{summary.tempMax}}°C{{/if}}
+        </td>
+        <td>
+          <a href="/dashboard/deletestation/{{_id}}" class="button">
+            {{> icons/delete}}
+          </a>
+        </td>
+      </tr>
     {{/each}}
   </tbody>
 </table>
-

@@ -29,3 +29,7 @@ router.get("/station/:id", stationController.viewStation);
 router.get("/about", aboutController.index);
 router.post("/station/:id/addreport", reportController.addReport);
 
+router.get("/dashboard/deletestation/:id", dashboardController.deleteStation);
+router.get("/station/:stationid/deletereport/:reportid", reportController.deleteReport);
+// filepath: c:\Users\wznoi\Documents\SETU HDIP\web-dev-2\weather-station\routes.js
+router.get("/station/:stationid/deletereport/:reportid", reportController.deleteReport);

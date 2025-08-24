@@ -20,24 +20,9 @@
       "_id": "4ecbf928-5742-4a4e-95bd-181e20531cc8"
     },
     {
-      "title": "Waterford",
-      "userid": "977c085e-1c4c-46ed-9200-5bb0d5668078",
-      "_id": "099511c8-ced9-418e-ad24-4b176ec9f766"
-    },
-    {
-      "title": "Killarney",
-      "userid": "977c085e-1c4c-46ed-9200-5bb0d5668078",
-      "_id": "1d145ded-5d7b-45bc-9dd2-d88c9f973e82"
-    },
-    {
       "title": "dublin",
       "userid": "977c085e-1c4c-46ed-9200-5bb0d5668078",
       "_id": "45bad5a0-9085-489c-80f8-55263d9f153a"
-    },
-    {
-      "title": "Cebu",
-      "userid": "977c085e-1c4c-46ed-9200-5bb0d5668078",
-      "_id": "b9e13820-e585-4bf1-a7f7-430ce4ccf799"
     },
     {
       "title": "waterford",
@@ -48,6 +33,11 @@
       "title": "test",
       "userid": "c0e7a5bd-b9d3-4f00-b506-d9e64ff67c71",
       "_id": "ffaa94e3-58fc-42de-a999-8c7d855ad598"
+    },
+    {
+      "title": "buanoy",
+      "userid": "73f8aa79-30cc-4b07-a89a-51ee1e5da984",
+      "_id": "1daf3267-937d-4042-b64a-4500c6778e25"
     }
   ]
 }

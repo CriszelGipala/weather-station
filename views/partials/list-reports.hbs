@@ -1,4 +1,4 @@
-<table class="table is-fullwidth is-striped is-hoverable">
+{{!-- <table class="table is-fullwidth is-striped is-hoverable">
   <thead>
     <tr>
       <th>Code</th>
@@ -17,6 +17,37 @@
       <td>{{windDirection}}</td>
       <td>{{pressure}}</td>
     </tr>
+    <a href="/dashboard/deletestation/{{_id}}" class="button">
+    {{>icons/delete}}
+  </a>
+    {{/each}}
+  </tbody>
+</table> --}}
+<table class="table is-fullwidth is-hoverable">
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Temperature (°C)</th>
+      <th>Wind Speed (km/h)</th>
+      <th>Wind Direction</th>
+      <th>Pressure (hPa)</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each reports}}
+      <tr>
+        <td>{{code}}</td>
+        <td>{{temperature}}</td>
+        <td>{{windSpeed}}</td>
+        <td>{{windDirection}}</td>
+        <td>{{pressure}}</td>
+        <td>
+          <a href="/station/{{../station._id}}/deletereport/{{_id}}" class="button">
+            {{> icons/delete}}
+          </a>
+        </td>
+      </tr>
     {{/each}}
   </tbody>
 </table>

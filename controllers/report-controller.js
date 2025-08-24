@@ -15,5 +15,15 @@ export const reportController = {
 
     await reportStore.addReport(stationId, newReport);
     response.redirect("/station/" + stationId);
-  }
+    },
+  
+   async deleteReport(request, response) {
+    try {
+      const { stationid, reportid } = request.params;
+      await reportStore.deleteReport(reportid);
+      response.redirect(`/station/${stationid}`);
+    } catch (err) {
+      response.status(500).send("Error deleting report");
+    }
+  },
 };
