@@ -7,10 +7,15 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a id="home" class="button" href="/">Home</a>
-          <a id="dashboard" class="button" href="/dashboard">Dashboard</a>
-          <a id="about" class="button" href="/about">About</a>
-          <a id="logout" class="button" href="/logout"> Logout </a>
+          {{#if isAuthPage}}
+            <a id="login" class="button" href="/login">Login</a>
+            <a id="signup" class="button" href="/signup">Sign up</a>
+          {{else}}
+            <a id="dashboard" class="button" href="/dashboard">Dashboard</a>
+            <a id="about" class="button" href="/about">About</a>
+            <a id="settings" class="button" href="/settings">Settings</a>
+            <a id="logout" class="button" href="/logout">Logout</a>
+          {{/if}}
         </div>
       </div>
     </div>

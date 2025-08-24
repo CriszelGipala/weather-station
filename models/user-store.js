@@ -38,4 +38,17 @@ export const userStore = {
     db.data.users = [];
     await db.write();
   },
+
+  // to update user details so the changes are saved
+  async updateUser(id, updates) {
+  await db.read();
+  const user = db.data.users.find((u) => u._id === id);
+  if (!user) return null;
+  user.firstName = updates.firstName;
+  user.lastName  = updates.lastName;
+  user.email     = updates.email;
+  user.password  = updates.password;
+  await db.write();          // <-- important
+  return user;
+}
 };

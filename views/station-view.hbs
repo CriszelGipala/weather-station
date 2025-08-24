@@ -5,29 +5,6 @@
     {{station.name}}
   </div>
 
-  <!-- Summary cards -->
-  <div class="columns">
-    <div class="column">
-      <div class="box has-text-centered">
-        <p class="heading">Min Temp</p>
-        <p class="title">{{summary.minTemp}}°C</p>
-      </div>
-    </div>
-    <div class="column">
-      <div class="box has-text-centered">
-        <p class="heading">Max Temp</p>
-        <p class="title">{{summary.maxTemp}}°C</p>
-      </div>
-    </div>
-    <div class="column">
-      <div class="box has-text-centered">
-        <p class="heading">Latest Weather</p>
-        <p class="title">{{summary.latestCodeLabel}}</p>
-      </div>
-    </div>
-  </div>
-  <!-- End Summary cards -->
-
   {{> list-reports}}
   {{> add-report}}
 </section>

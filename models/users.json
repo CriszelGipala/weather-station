@@ -2,8 +2,8 @@
   "file": "./models/users.json",
   "users": [
     {
-      "firstName": "C",
-      "lastName": "G",
+      "firstName": "Zeltronica that is me - save now!",
+      "lastName": "Famous Vlogger/Gamer",
       "email": "gipalacriszel512@gmail.com",
       "password": "software2026",
       "_id": "977c085e-1c4c-46ed-9200-5bb0d5668078"
@@ -14,6 +14,55 @@
       "email": "cryptoz934@gmail.com",
       "password": "software2026",
       "_id": "42d955f6-c962-43e5-a343-3d6379e5c893"
+    },
+    {
+      "firstName": "Criszel",
+      "lastName": "Gipala",
+      "email": "gipalalaica1432@gmail.com",
+      "password": "software2026",
+      "_id": "73f8aa79-30cc-4b07-a89a-51ee1e5da984"
+    },
+    {
+      "firstName": "Criszel",
+      "lastName": "Gipala",
+      "email": "cznoinska@gmail.com",
+      "password": "asd",
+      "_id": "c0e7a5bd-b9d3-4f00-b506-d9e64ff67c71"
+    },
+    {
+      "firstName": "Zeltronica",
+      "lastName": "Gwapa",
+      "email": "gipalacriszel512@gmail.com",
+      "password": "asdf",
+      "_id": "3a051171-a661-446d-aac4-318ce050fedc"
+    },
+    {
+      "firstName": "Criszel",
+      "lastName": "Gipala",
+      "email": "gipalacriszel512@gmail.com",
+      "password": "asdf",
+      "_id": "e355c66a-b7b5-4e1c-b68b-8096d9f41a62"
+    },
+    {
+      "firstName": "Criszel",
+      "lastName": "Gipala",
+      "email": "gipalacriszel512@gmail.com",
+      "password": "asdf",
+      "_id": "5a1feb5d-673b-4638-a769-10219d3bd98e"
+    },
+    {
+      "firstName": "Criszel",
+      "lastName": "Gipala",
+      "email": "cznoinska@gmail.com",
+      "password": "asdf",
+      "_id": "2a80cf94-2511-481e-a89f-3caee451b4b0"
+    },
+    {
+      "firstName": "Criszel",
+      "lastName": "Gipala",
+      "email": "cznoinska@gmail.com",
+      "password": "asd",
+      "_id": "8fc05ea0-4e52-4bca-8835-4e16b4dc368c"
     }
   ]
 }

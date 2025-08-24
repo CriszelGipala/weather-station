@@ -10,6 +10,7 @@ export const reportController = {
       windSpeed: request.body.windSpeed,
       windDirection: request.body.windDirection,
       pressure: request.body.pressure,
+      date: new Date().toISOString()
     };
 
     await reportStore.addReport(stationId, newReport);

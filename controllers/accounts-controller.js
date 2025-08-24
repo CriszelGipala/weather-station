@@ -1,18 +1,17 @@
 import { userStore } from "../models/user-store.js";
 
 export const accountsController = {
-  index(request, response) {
-    const viewData = {
-      title: "Login or Signup",
-    };
-    response.render("index", viewData);
+
+  async index(request, response) {
+    const user = await accountsController.getLoggedInUser(request);
+    if (user) {
+      return response.redirect("/dashboard");
+    }
+    return response.render("index", { title: "Login or Signup", isAuthPage: true });
   },
 
   login(request, response) {
-    const viewData = {
-      title: "Login to the Service",
-    };
-    response.render("login-view", viewData);
+    response.render("login-view", { title: "Login to the Service", isAuthPage: true });
   },
 
   logout(request, response) {
@@ -21,10 +20,7 @@ export const accountsController = {
   },
 
   signup(request, response) {
-    const viewData = {
-      title: "Login to the Service",
-    };
-    response.render("signup-view", viewData);
+    response.render("signup-view", { title: "Sign up to the Service", isAuthPage: true });
   },
 
   async register(request, response) {
@@ -46,7 +42,48 @@ export const accountsController = {
   },
 
   async getLoggedInUser(request) {
-    const userEmail = request.cookies.station;
-    return await userStore.getUserByEmail(userEmail);
+    const email = request.cookies.station;   // same cookie name as above
+    if (!email) return null;
+    return await userStore.getUserByEmail(email);
   },
-};
+
+  // to edit user details
+  async editSettings(request, response) {
+    const user = await accountsController.getLoggedInUser(request);
+    if (!user) return response.redirect("/");
+    response.render("settings-view", { title: "Edit Settings", user });
+  },
+
+  // to update user details
+  async updateSettings(request, response) {
+  try {
+    const current = await accountsController.getLoggedInUser(request);
+    if (!current) return response.redirect("/");
+
+    console.log("Updating settings for:", current.email);
+
+    const updates = {
+      firstName: request.body.firstName,
+      lastName:  request.body.lastName,
+      email:     request.body.email,
+      password:  request.body.password,
+    };
+
+    // ensure userStore.updateUser exists and writes to disk
+    await userStore.updateUser(current._id, updates);
+
+    // keep cookie in sync if email changed
+    response.cookie("station", updates.email);
+
+    // redirect wherever you want after saving:
+    return response.redirect("/dashboard");
+  } catch (err) {
+    console.error("updateSettings error:", err);
+    return response.status(500).render("settings-view", {
+      title: "Edit Settings",
+      user: request.body,
+      error: "Could not save changes. Please try again.",
+    });
+  }
+}
+}
