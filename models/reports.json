@@ -74,15 +74,6 @@
       "stationId": "099511c8-ced9-418e-ad24-4b176ec9f766"
     },
     {
-      "code": "802",
-      "temperature": "10",
-      "windSpeed": "12",
-      "windDirection": "45",
-      "pressure": "12",
-      "_id": "37da26fa-16a5-4b7a-a674-fc9a4edce39c",
-      "stationId": "bb8d5b71-2a95-4f96-8b8b-a731c403ec17"
-    },
-    {
       "code": "500",
       "temperature": "12",
       "windSpeed": "12",
@@ -98,15 +89,6 @@
       "windDirection": "90",
       "pressure": "50",
       "_id": "c32fb0ee-db77-4049-80c5-9b0d593b6109",
-      "stationId": "bb8d5b71-2a95-4f96-8b8b-a731c403ec17"
-    },
-    {
-      "code": "601",
-      "temperature": "-12",
-      "windSpeed": "-45",
-      "windDirection": "315",
-      "pressure": "-23",
-      "_id": "222a4f95-ce36-4031-b2b4-dd5d3951d1f7",
       "stationId": "bb8d5b71-2a95-4f96-8b8b-a731c403ec17"
     },
     {
@@ -128,6 +110,26 @@
       "date": "2025-08-24T20:38:03.641Z",
       "_id": "483c8838-65f6-40c2-b43a-4fa573429f2f",
       "stationId": "4f7b1f00-1087-4807-a55b-8b7550ce9095"
+    },
+    {
+      "date": "2025-08-24T21:09:55.073Z",
+      "code": "801",
+      "temperature": "90",
+      "windSpeed": "89",
+      "windDirection": "90",
+      "pressure": "90",
+      "_id": "9b19cc4f-1066-4db3-acee-d067eca17231",
+      "stationId": "bb8d5b71-2a95-4f96-8b8b-a731c403ec17"
+    },
+    {
+      "date": "2025-08-24T21:31:23.823Z",
+      "code": "800",
+      "temperature": "11",
+      "windSpeed": "1",
+      "windDirection": "135",
+      "pressure": "1",
+      "_id": "5bdc0778-3c27-40eb-87fb-dcef56af5c4e",
+      "stationId": "ffaa94e3-58fc-42de-a999-8c7d855ad598"
     }
   ]
 }

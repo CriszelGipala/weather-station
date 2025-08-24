@@ -5,12 +5,12 @@ export const reportController = {
   async addReport(request, response) {
     const stationId = request.params.id;
     const newReport = {
+      date: new Date().toISOString(),
       code: request.body.code,
       temperature: request.body.temperature,
       windSpeed: request.body.windSpeed,
       windDirection: request.body.windDirection,
-      pressure: request.body.pressure,
-      date: new Date().toISOString()
+      pressure: request.body.pressure
     };
 
     await reportStore.addReport(stationId, newReport);

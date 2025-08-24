@@ -2,8 +2,8 @@
   "file": "./models/users.json",
   "users": [
     {
-      "firstName": "Zeltronica that is me - save now!",
-      "lastName": "Famous Vlogger/Gamer",
+      "firstName": "Hi Zeltornica",
+      "lastName": "The best programmer",
       "email": "gipalacriszel512@gmail.com",
       "password": "software2026",
       "_id": "977c085e-1c4c-46ed-9200-5bb0d5668078"

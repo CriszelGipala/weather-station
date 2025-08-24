@@ -1,7 +1,6 @@
 import { userStore } from "../models/user-store.js";
 
 export const accountsController = {
-
   async index(request, response) {
     const user = await accountsController.getLoggedInUser(request);
     if (user) {
@@ -42,7 +41,7 @@ export const accountsController = {
   },
 
   async getLoggedInUser(request) {
-    const email = request.cookies.station;   // same cookie name as above
+    const email = request.cookies.station; 
     if (!email) return null;
     return await userStore.getUserByEmail(email);
   },
@@ -75,7 +74,7 @@ export const accountsController = {
     // keep cookie in sync if email changed
     response.cookie("station", updates.email);
 
-    // redirect wherever you want after saving:
+    // redirect to dashboard after saving:
     return response.redirect("/dashboard");
   } catch (err) {
     console.error("updateSettings error:", err);

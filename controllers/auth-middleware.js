@@ -1,4 +1,3 @@
-// controllers/auth-middleware.js
 import { accountsController } from "./accounts-controller.js";
 
 export async function requireAuth(request, response, next) {

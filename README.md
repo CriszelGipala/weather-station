@@ -47,7 +47,8 @@ The app is built using **JavaScript**, **Express**, and **Handlebars**, and is d
 4. Open your browswer and go to:
     http://localhost:4000
 
-Or click this link to open in render: https://weather-station-ky2x.onrender.com/dashboard
+Or click this link to open in render: https://weather-station-ky2x.onrender.com
+
 
 Technologies Used
 - Javascript
